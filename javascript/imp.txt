@@ -1,0 +1,7 @@
+Data types in JS
+
+Number      12 , 2.45
+Boolean     true
+String      e23iur
+Undefined   f3io
+NULL        
