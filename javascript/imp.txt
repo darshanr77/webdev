@@ -93,3 +93,18 @@ Even with 0 ms delay ❗
 👉 Synchronous code runs first
 👉 Then async callbacks
 
+
+
+//inputs in JS
+
+function getValue() {
+  let value = document.getElementById("myInput").value;
+  console.log(value);
+}
+
+in browser
+
+let name = prompt("Enter your name:");
+console.log(name);
+
+
