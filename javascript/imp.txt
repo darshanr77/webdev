@@ -5,3 +5,91 @@ Boolean     true
 String      e23iur
 Undefined   f3io
 NULL        
+
+assignment operator is = it assigns the value of left to the right  
+
+if age = 10
+
+++age means it will first increment then it will assign the value like curAge = ++age 11
+
+age++ means it will first assign then it will increment the value like curAge = age++ 10
+
+
+keywords in JS
+
+var -> old dont use it can be used outside block {} leaks memory
+let -> modern use when u have chnage data cannot be used outside {} 
+const -> popular use everytime can modify 
+
+const arr = [1, 2, 3];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+const user = { name: "Darshan" };
+
+user.name = "Ravi";   // ✅ allowed
+user = {};            // ❌ Error
+
+console.log(b);  // reference error for const and let but for var its undefined
+let b = 10;
+
+
+CLOUSURE
+
+function outer() {
+  let count = 0;
+
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const fn = outer();
+
+fn(); // 1
+fn(); // 2
+fn(); // 3
+
+Why does this work?
+
+outer() finished execution…
+BUT inner() still remembers count.
+
+👉 Because of closure
+
+
+
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Timer");
+}, 0);
+
+console.log("End");
+
+
+Start
+End
+Timer
+
+Why?
+
+1️⃣ Start → runs immediately
+2️⃣ setTimeout → sent to Web API
+3️⃣ End → runs
+4️⃣ Timer → runs last
+
+Even with 0 ms delay ❗
+
+💎 Golden Rule
+
+👉 Synchronous code runs first
+👉 Then async callbacks
+
