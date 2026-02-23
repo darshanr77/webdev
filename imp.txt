@@ -1,1 +1,9 @@
-rafce
+if we create a const for arr or object we can change the value of arr or object
+ but it stores the address we cannot change it
+
+ const arr = [1,2,3,4,5];  we can change the elements but not its address
+  const student = [
+    name : "kok",
+    age : 19,
+    section : 'A'
+  ];  we can change the values but not its addresss
