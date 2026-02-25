@@ -7,3 +7,26 @@ if we create a const for arr or object we can change the value of arr or object
     age : 19,
     section : 'A'
   ];  we can change the values but not its addresss
+
+
+  // to generate rand no between 1-6
+  let randno = Math.floor(Math.random() * 6) + 1;
+
+
+if we write any console.log ot any thing after return in any func then it will not be executed
+
+
+SCOPES
+
+
+function scope -> Variables declared with var inside a function are accessible only within that function.
+
+block scope -> Variables declared with let and const inside {} are accessible only inside that block
+
+global scope -> declared outside fucn accessible everywhere
+
+Lexical Scope ⭐ (Very Important) – Inner function can access variables of its outer function (used in closures). nested loops
+
+Scope Chain ⭐ (Very Important) – JavaScript searches variable from current scope → outer scope → global scope.
+
+
