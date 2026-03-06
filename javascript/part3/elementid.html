@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>getElementById Demo</title>
+<style>
+.box{
+    padding:10px;
+    border:1px solid black;
+    margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>JavaScript getElementById() Examples</h2>
+
+<!-- Change Text -->
+<div class="box">
+<p id="text">Hello World</p>
+<button onclick="changeText()">Change Text</button>
+</div>
+
+<!-- Change Style -->
+<div class="box">
+<p id="styleText">Change my color</p>
+<button onclick="changeStyle()">Change Style</button>
+</div>
+
+<!-- Input Value -->
+<div class="box">
+<input id="nameInput" placeholder="Enter name">
+<button onclick="showName()">Show Name</button>
+<p id="nameOutput"></p>
+</div>
+
+<!-- Show / Hide -->
+<div class="box">
+<p id="hideText">You can hide me</p>
+<button onclick="hideText()">Hide</button>
+<button onclick="showText()">Show</button>
+</div>
+
+<!-- Change Image -->
+<div class="box">
+<img id="myImage" src="https://via.placeholder.com/150">
+<br><br>
+<button onclick="changeImage()">Change Image</button>
+</div>
+
+<!-- Attribute Example -->
+<div class="box">
+<a id="myLink" href="#">Old Link</a>
+<br><br>
+<button onclick="changeLink()">Change Link</button>
+</div>
+
+<script>
+
+// 1 Change Text
+function changeText(){
+    document.getElementById("text").innerHTML = "Text Changed!";
+}
+
+// 2 Change Style
+function changeStyle(){
+    let el = document.getElementById("styleText");
+    el.style.color = "red";
+    el.style.fontSize = "25px";
+}
+
+// 3 Input Value
+function showName(){
+    let name = document.getElementById("nameInput").value;
+    document.getElementById("nameOutput").innerHTML = "Hello " + name;
+}
+
+// 4 Hide Element
+function hideText(){
+    document.getElementById("hideText").style.display = "none";
+}
+
+// 5 Show Element
+function showText(){
+    document.getElementById("hideText").style.display = "block";
+}
+
+// 6 Change Image
+function changeImage(){
+    document.getElementById("myImage").src = "https://via.placeholder.com/150/ff0000";
+}
+
+// 7 Change Attribute
+function changeLink(){
+    document.getElementById("myLink").setAttribute("href","https://google.com");
+    document.getElementById("myLink").innerHTML = "Go to Google";
+}
+
+</script>
+
+</body>
+</html>

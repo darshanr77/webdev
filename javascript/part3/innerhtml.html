@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>innerHTML vs innerText vs textContent</title>
+<style>
+.box{
+border:1px solid black;
+padding:10px;
+margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>JavaScript Text Properties Demo</h2>
+
+<div class="box">
+<p id="demo">
+Hello <b>Darshan</b>
+<span style="display:none">Hidden Text</span>
+</p>
+</div>
+
+<button onclick="showInnerHTML()">innerHTML</button>
+<button onclick="showInnerText()">innerText</button>
+<button onclick="showTextContent()">textContent</button>
+
+<h3>Output:</h3>
+<p id="output"></p>
+
+<script>
+
+function showInnerHTML(){
+
+let el = document.getElementById("demo");
+
+let html = el.innerHTML;
+let text = el.innerText;
+let content = el.textContent;
+let id = el.id;
+let tag = el.tagName;
+let className = el.className;
+
+document.getElementById("output").innerHTML =
+"innerHTML : " + html + "<br>" +
+"innerText : " + text + "<br>" +
+"textContent : " + content + "<br>" +
+"id : " + id + "<br>" +
+"tagName : " + tag + "<br>" +
+"className : " + className;
+
+}
+
+function showInnerText(){
+let value = document.getElementById("demo").innerText;
+document.getElementById("output").innerHTML = value;
+}
+
+function showTextContent(){
+let value = document.getElementById("demo").textContent;
+document.getElementById("output").innerHTML = value;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>classList with Tailwind</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="p-10">
+
+<h2 class="text-2xl font-bold mb-6">JavaScript classList Demo</h2>
+
+<div id="demo" class="p-5 border-2 border-black mb-6">
+Hello Darshan
+</div>
+
+<button onclick="addClass()" class="bg-blue-500 text-white px-4 py-2 mr-2 rounded">
+Add Class
+</button>
+
+<button onclick="removeClass()" class="bg-red-500 text-white px-4 py-2 mr-2 rounded">
+Remove Class
+</button>
+
+<button onclick="toggleClass()" class="bg-green-500 text-white px-4 py-2 mr-2 rounded">
+Toggle Class
+</button>
+
+<button onclick="checkClass()" class="bg-purple-500 text-white px-4 py-2 rounded">
+Check Class
+</button>
+
+<p id="output" class="mt-6 text-lg"></p>
+
+<script>
+
+function addClass(){
+let el = document.getElementById("demo");
+
+el.classList.add("bg-red-500","text-white");
+}
+
+function removeClass(){
+let el = document.getElementById("demo");
+
+el.classList.remove("bg-red-500","text-white");
+}
+
+function toggleClass(){
+let el = document.getElementById("demo");
+
+el.classList.toggle("text-3xl");
+}
+
+function checkClass(){
+
+let el = document.getElementById("demo");
+
+let result = el.classList.contains("bg-red-500");
+
+document.getElementById("output").innerText = "Has red background: " + result;
+
+}
+
+</script>
+
+</body>
+</html>
